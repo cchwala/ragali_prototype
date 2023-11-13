@@ -14,10 +14,10 @@ def scatter_line(
     if vmax is None:
         vmax = np.max(da.values)
 
-    x0 = da.site_0_lon.values
-    y0 = da.site_0_lat.values
-    x1 = da.site_1_lon.values
-    y1 = da.site_1_lat.values
+    x0 = np.atleast_1d(da.site_0_lon.values)
+    y0 = np.atleast_1d(da.site_0_lat.values)
+    x1 = np.atleast_1d(da.site_1_lon.values)
+    y1 = np.atleast_1d(da.site_1_lat.values)
 
     lines = LineCollection(
         [((x0[i], y0[i]), (x1[i], y1[i])) for i in range(len(x0))],
