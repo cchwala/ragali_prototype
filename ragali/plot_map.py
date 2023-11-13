@@ -35,9 +35,10 @@ def scatter_line(
     ax.autoscale()
 
     if add_time_slider is False:
-        if not np.isscalar(da.time.values):
-            raise ValueError('time dimension of `da` must have zero length if no '
-                             'time slider is added to the plot')
+        if 'time' in da.dims:
+            if not np.isscalar(da.time.values):
+                raise ValueError('time dimension of `da` must have zero length if no '
+                                 'time slider is added to the plot')
         lines.set_array(da)
     else:
         lines.set_array(da.isel(time=0).values)
