@@ -1,5 +1,7 @@
 # ragali_prototype
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cchwala/ragali_prototype/main)
+
 `ragali` should make it easy to handle and plot data from weather radar, rain gauges (also PWS) and links (CML and SML). Main features should be:
 * plot data on map (including a simple way to plot lines with a colormap)
 * find neigbhouring or intersecting sensor data
