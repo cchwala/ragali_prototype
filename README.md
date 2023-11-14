@@ -1,26 +1,10 @@
-# ragali
+# ragali_prototype
 
+`ragali` should make it easy to handle and plot data from weather radar, rain gauges (also PWS) and links (CML and SML). Main features should be:
+* plot data on map (including a simple way to plot lines with a colormap)
+* find neigbhouring or intersecting sensor data
+* do standard validation of results
 
-[![pypi](https://img.shields.io/pypi/v/ragali.svg)](https://pypi.org/project/ragali/)
-[![python](https://img.shields.io/pypi/pyversions/ragali.svg)](https://pypi.org/project/ragali/)
-[![Build Status](https://github.com/cchwala/ragali/actions/workflows/dev.yml/badge.svg)](https://github.com/cchwala/ragali/actions/workflows/dev.yml)
-[![codecov](https://codecov.io/gh/cchwala/ragali/branch/main/graphs/badge.svg)](https://codecov.io/github/cchwala/ragali)
-
-
-
-Conveniently handle data from Radar, Gauges and Links, including PWS, CML and SML data
-
-
-* Documentation: <https://cchwala.github.io/ragali>
-* GitHub: <https://github.com/cchwala/ragali>
-* PyPI: <https://pypi.org/project/ragali/>
-* Free software: BSD-3-Clause
-
-
-## Features
-
-* TODO
-
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage) project template.
+Important notes:
+* This is a early prototype of potential functions of `ragali`. There might be errors in the code and naming of functions and variables might change later.
+* Current implementations are focused mostly on CMLs because plotting lines is not as easy as plotting points and because getting radar values along CMLs is harder then getting radar values at a certain point.
