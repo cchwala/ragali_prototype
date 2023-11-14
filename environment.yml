@@ -7,8 +7,9 @@ dependencies:
   - xarray
   - netcdf4
   - matplotlib
-  - cartopy
   - shapely
   - pandas
   - sparse
+  # maybe the things below should be optional later to keep the env lightweight
   - ipywidgets
+  - cartopy
