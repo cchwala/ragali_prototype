@@ -1,0 +1,14 @@
+name: opensense_sandbox
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python>=3.10
+  - xarray
+  - netcdf4
+  - matplotlib
+  - cartopy
+  - shapely
+  - pandas
+  - sparse
+  - ipywidgets
