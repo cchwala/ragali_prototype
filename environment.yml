@@ -14,3 +14,4 @@ dependencies:
   - ipywidgets
   - ipympl # needed for %matplotlib widget
   - cartopy
+  - OWSLib # required to add WMS tiles to cartopy plot
