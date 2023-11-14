@@ -1,4 +1,4 @@
-name: opensense_sandbox
+name: ragali
 channels:
   - conda-forge
   - pytorch
