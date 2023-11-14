@@ -12,4 +12,5 @@ dependencies:
   - sparse
   # maybe the things below should be optional later to keep the env lightweight
   - ipywidgets
+  - ipympl # needed for %matplotlib widget
   - cartopy
