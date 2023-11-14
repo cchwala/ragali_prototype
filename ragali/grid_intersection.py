@@ -4,6 +4,10 @@
 
 # TODO: rename old x1, x2 etc to x0, x1
 
+# TODO: There could be an error in these functions, because I do not get correct
+#       grid intersections in the example notebook here, even though I am pretty
+#       sure that the code worked correctly in pycomlink.
+
 
 from __future__ import division
 from builtins import zip
