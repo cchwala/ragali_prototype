@@ -6,11 +6,12 @@ from matplotlib.colors import Normalize
 import ipywidgets
 
 
-def scatter_line(
-    da, vmax=None, vmin=0, cmap='viridis', linewidth=2, pad_width=1, ax=None, add_time_slider=False
-):
+def scatter_line(da, vmax=None, vmin=0, cmap='viridis', linewidth=2, pad_width=1, ax=None, add_time_slider=False):
     if ax is None:
         fig, ax = plt.subplots()
+    else:
+        fig = ax.get_figure()
+
     if vmax is None:
         vmax = np.max(da.values)
 
@@ -29,7 +30,7 @@ def scatter_line(
         path_effects=[
             pe.Stroke(linewidth=linewidth + pad_width, foreground='k', capstyle='round'),
             pe.Normal(),
-        ]
+        ],
     )
     ax.add_collection(lines)
     ax.autoscale()
@@ -37,19 +38,17 @@ def scatter_line(
     if add_time_slider is False:
         if 'time' in da.dims:
             if not np.isscalar(da.time.values):
-                raise ValueError('time dimension of `da` must have zero length if no '
-                                 'time slider is added to the plot')
+                raise ValueError(
+                    'time dimension of `da` must have zero length if no ' 'time slider is added to the plot'
+                )
         lines.set_array(da)
     else:
         lines.set_array(da.isel(time=0).values)
 
         def update(t=da.time.isel(time=0).values):
             lines.set_array(da.sel(time=t).values)
-            plt.draw()
+            fig.canvas.draw_idle()
 
-        ipywidgets.interact(
-            update,
-            t=ipywidgets.SelectionSlider(options=da.time.values)
-        )
+        ipywidgets.interact(update, t=ipywidgets.SelectionSlider(options=da.time.values))
 
     return lines
