@@ -8,6 +8,8 @@
 * do standard validation of results
 * use `xarray.Dataset` as data model throughout all functions
 * enforce the usage of [OPENSENSE data format conventions](https://github.com/OpenSenseAction/OS_data_format_conventions) and provide a function to check these
+* basic uncertainty estimation method e.g. via cross-validation of reference gauges
+
 
 Important notes:
 * This is a early prototype of potential functions of `ragali`. There might be errors in the code and naming of functions and variables might change later.
