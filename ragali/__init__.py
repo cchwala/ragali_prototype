@@ -9,3 +9,4 @@ from . import get_datasets
 from . import grid_intersection
 from . import plot_map
 from . import plot_ts
+from . import adjacency
